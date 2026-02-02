@@ -29,5 +29,19 @@ podman run -d --name fhir-bridge -p 8085:8085 fhir-bridge:latest
 - **OpenEMR:** http://192.168.1.46:8084 (admin/pass)
 - **OpenEMR FHIR:** http://192.168.1.46:8084/apis/default/fhir/
 
+## Automation Scripts (`scripts/`)
+
+Playwright-based automation for OpenEMR setup:
+
+- `enable_fhir_api.js` - Enable FHIR REST API in config
+- `add_patients.js` - Create demo patients
+- `enable_password_grant.js` - Enable OAuth2 password grant
+
+```bash
+cd scripts
+npm install playwright
+node add_patients.js
+```
+
 ## License
 MIT
